@@ -2,6 +2,10 @@
 
 require_once __DIR__.'/../vendor/autoload.php';
 
+$baseServices = require_once __DIR__.'/../config/framework.config.php';
+
+echo count($baseServices['components']);
+
 $pathForThemes = __DIR__.'/vendors/';
 $themeForUI    = $pathForThemes."happy-scroll";
 

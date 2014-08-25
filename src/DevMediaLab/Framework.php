@@ -38,6 +38,7 @@ class Framework extends HttpKernel
         return $this->container;
     }
 
+
     public function makeAlias($aliases)
     {
         foreach ($aliases as $original => $alias) {

@@ -18,7 +18,7 @@ return [
 
 
 
-$routes = include __DIR__.'/../app/routes.php';
-/* Twig */
-$container->register(new TwigServiceProvider());
+// $routes = include __DIR__.'/../app/routes.php';
+
+// $container->register(new TwigServiceProvider());
 

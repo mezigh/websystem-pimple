@@ -4,7 +4,7 @@
         "Read more about it at http://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "275dd00bb2c2e8b482e2c33b05c46537",
+    "hash": "7c0e7d964d2aceee9058b4512e80e3f9",
     "packages": [
         {
             "name": "monolog/monolog",
@@ -878,12 +878,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/doctrine/instantiator.git",
-                "reference": "337e8722b8f1e2666ab24fdbdf659c719f39c3fd"
+                "reference": "26404e0c90565b614ee76b988b9bc8790d77f590"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/doctrine/instantiator/zipball/337e8722b8f1e2666ab24fdbdf659c719f39c3fd",
-                "reference": "337e8722b8f1e2666ab24fdbdf659c719f39c3fd",
+                "url": "https://api.github.com/repos/doctrine/instantiator/zipball/26404e0c90565b614ee76b988b9bc8790d77f590",
+                "reference": "26404e0c90565b614ee76b988b9bc8790d77f590",
                 "shasum": ""
             },
             "require": {
@@ -924,7 +924,7 @@
                 "constructor",
                 "instantiate"
             ],
-            "time": "2014-08-18 20:15:24"
+            "time": "2014-08-25 15:09:25"
         },
         {
             "name": "mockery/mockery",
@@ -1240,12 +1240,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/sebastianbergmann/phpunit.git",
-                "reference": "5cc03b0dc34070ac8238f7a86eec97509bb8b2b6"
+                "reference": "f608785bef567a9da36dd47e4e5a099fb42fdefc"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/sebastianbergmann/phpunit/zipball/5cc03b0dc34070ac8238f7a86eec97509bb8b2b6",
-                "reference": "5cc03b0dc34070ac8238f7a86eec97509bb8b2b6",
+                "url": "https://api.github.com/repos/sebastianbergmann/phpunit/zipball/f608785bef567a9da36dd47e4e5a099fb42fdefc",
+                "reference": "f608785bef567a9da36dd47e4e5a099fb42fdefc",
                 "shasum": ""
             },
             "require": {
@@ -1302,7 +1302,7 @@
                 "testing",
                 "xunit"
             ],
-            "time": "2014-08-19 04:57:13"
+            "time": "2014-08-24 13:50:04"
         },
         {
             "name": "phpunit/phpunit-mock-objects",

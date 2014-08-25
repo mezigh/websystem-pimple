@@ -1,4 +1,4 @@
 websystem-pimple
 ================
 
-Yolo PHP Framework approach of Silex and in Symfony  components in general
+Yolo PHP Framework approach of Silex and Symfony  components in general

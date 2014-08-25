@@ -1,0 +1,22 @@
+theme:
+    name: bs-multipurpose-ruma
+    version: 0.1.0
+    original: todo
+    modifier: DevMediaLab
+    framework: bootstrap 3
+    asset.path: /vendors/bs-multipurpose-ruma/assets/
+    master: master.layout.html.twig
+    includes:
+        head: head.html.twig
+        foot: foot.html.twig
+    pages:
+        home:
+            template: index.html.twig
+        services:
+            template: services.html.twig
+        portfolio:
+            template: portfolio.html.twig
+        pricing:
+            template: pricing.html.twig
+        contact:
+            template: contact.html.twig

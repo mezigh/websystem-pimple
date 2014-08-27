@@ -19,6 +19,6 @@ return [
 
 
 $routes = include __DIR__.'/../app/routes.php';
-/* Twig */
+
 $container->register(new TwigServiceProvider());
 

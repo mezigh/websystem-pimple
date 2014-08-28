@@ -60,6 +60,26 @@ class StageController
         exit;
     }
 
+    public function loginAction(Request $request)
+    {
+        extract($request->attributes->all(), EXTR_SKIP);
+        $response = new Response($this->getTwig()->render('/pages/login.html.twig', ['active'=>$request->attributes->get('_route'), 'class'=>'', 'title'=>"WebSystem | Login" , 'content' => $request->get('content')]) );
+        // $response->setTtl(19);
+
+        return $response;
+    }
+
+    public function postLoginAction(Request $request)
+    {
+        $email = $request->get('email');
+        $pass  = $request->get('password');
+
+        exit;
+
+        /* TODO Check for redirection */
+
+    }
+
 
     public function aboutAction(Request $request)
     {

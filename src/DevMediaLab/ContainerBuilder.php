@@ -3,6 +3,10 @@
 
 namespace DevMediaLab;
 
+use StageController;
+use DevMediaLab\Providers\MonologServiceProvider;
+use DevMediaLab\Listeners\StageControllerListener;
+use DevMediaLab\Providers\TwigServiceProvider;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\RequestContext;
@@ -11,10 +15,6 @@ use Symfony\Component\EventDispatcher\EventDispatcher;
 use Symfony\Component\HttpKernel\Controller\ControllerResolver;
 use Symfony\Component\HttpKernel\EventListener\RouterListener;
 use Symfony\Component\HttpKernel\EventListener\ExceptionListener;
-use StageController;
-use DevMediaLab\Listeners\StageControllerListener;
-use DevMediaLab\Providers\TwigServiceProvider;
-use DevMediaLab\BaseView;
 use Pimple\Container;
 
 class ContainerBuilder
@@ -55,8 +55,10 @@ class ContainerBuilder
             return new EventDispatcher();
         };
 
+        $this->container->register(new MonologServiceProvider());
+
         $this->container['router.listener'] = function($c) {
-            return new RouterListener($c['url.matcher']);
+            return new RouterListener($c['url.matcher'], $c['request.context'] ,$c['logger']);
         };
 
         $this->container['http.response'] = function($c) {
@@ -74,7 +76,7 @@ class ContainerBuilder
         /* Listeners */
         $this->container['event.dispatcher']->addSubscriber($this->container['router.listener']);
         $this->container['event.dispatcher']->addSubscriber($this->container['exception.listener']);
-        // $container['event.dispatcher']->addSubscriber($container['stage.controller.listener']);
+        // $this->container['event.dispatcher']->addSubscriber($container['stage.controller.listener']);
 
         /* Twig */
         $this->container->register(new TwigServiceProvider());
@@ -82,10 +84,6 @@ class ContainerBuilder
         $this->container['twig'] = $this->container->extend('twig', function ($twig, $container) {
             return $twig;
         });
-
-        $this->container['base.view'] = function($c) {
-            return new BaseView($c['twig']);
-        };
 
         return $this->container;
 

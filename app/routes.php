@@ -40,10 +40,20 @@ $routes->add('blog', new Route('/blog',[
 ],['_method' => 'GET']
 ));
 
+$routes->add('login', new Route('/login',[
+    'content' => "WebSystem Login",
+    '_controller' => [ $this->container['stage.controller'],'loginAction'],
+],['_method' => 'GET']
+));
+
+$routes->add('post_login', new Route('/post_login', [
+    '_controller' => [ $this->container['stage.controller'],'postLoginAction']]
+));
+
 $routes->add('blog_item', new Route('/blog-item',[
-        'content' => "WebSystem Blog",
-        '_controller' => [ $this->container['stage.controller'],'blogItemAction'],
-    ],['_method' => 'GET']
+    'content' => "WebSystem Blog",
+    '_controller' => [ $this->container['stage.controller'],'blogItemAction'],
+],['_method' => 'GET']
 ));
 
 $routes->add('news', new Route('/news', [

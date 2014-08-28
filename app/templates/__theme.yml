@@ -1,10 +1,10 @@
 theme:
-    name: bs-multipurpose-ruma
+    name: corlate
     version: 0.1.0
     original: todo
     modifier: DevMediaLab
     framework: bootstrap 3
-    asset.path: /vendors/bs-multipurpose-ruma/assets/
+    asset.path: /vendors/corlate/
     master: master.layout.html.twig
     includes:
         head: head.html.twig

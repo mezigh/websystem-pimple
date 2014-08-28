@@ -1,4 +1,5 @@
 <?php
+
 return [
     "components" => [
         'http.request',
@@ -13,11 +14,12 @@ return [
         'stage.controller.listener',
         'twig',
         'base.view'
+    ],
+
+    "aliases" => [
+        'Framework' => 'DevMediaLab\Framework',
+        'Request'   => 'Symfony\Component\HttpFoundation\Request',
+        'Response'  => 'Symfony\Component\HttpFoundation\Response'
     ]
+
 ];
-
-
-
-// $routes = include __DIR__.'/../app/routes.php';
-
-// $container->register(new TwigServiceProvider());

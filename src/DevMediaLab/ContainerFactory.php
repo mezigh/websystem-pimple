@@ -20,7 +20,7 @@ class ContainerFactory
 
     }
 
-    public function addReferenceFactory($reference)
+    public function addReferenceForFactory($reference)
     {
 
     }

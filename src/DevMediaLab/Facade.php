@@ -63,7 +63,7 @@ class Facade {
 	/**
 	 * Get the application instance behind the facade.
 	 *
-	 * @return \Illuminate\Foundation\Application
+	 * @return \DevMediaLab\Framework $app
 	 */
 	public static function getFacadeApplication()
 	{
@@ -73,7 +73,7 @@ class Facade {
 	/**
 	 * Set the application instance.
 	 *
-	 * @param  \Illuminate\Foundation\Application  $app
+	 * @param  \DevMediaLab\Framework $app
 	 * @return void
 	 */
 	public static function setFacadeApplication($app)

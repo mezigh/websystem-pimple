@@ -15,8 +15,9 @@ class StageController
 
     public function indexAction(Request $request)
     {
+
         extract($request->attributes->all(), EXTR_SKIP);
-        $response = new Response($this->getTwig()->render('/pages/index.html.twig', ['title'=>"WebSystem | Twig" , 'content' => $request->get('content')]) );
+        $response = new Response($this->getTwig()->render('/pages/index.html.twig', ['active'=>$request->attributes->get('_route'), 'class'=>'homepage', 'title'=>"WebSystem | Twig" , 'content' => $request->get('content')]) );
         // $response->setTtl(19);
 
         return $response;
@@ -26,7 +27,7 @@ class StageController
     {
         /* bs-multipurpose-ruma */
         extract($request->attributes->all(), EXTR_SKIP);
-        $response = new Response($this->getTwig()->render('/pages/services.html.twig', ['title'=>"WebSystem | Services" , 'content' => $request->get('content')]) );
+        $response = new Response($this->getTwig()->render('/pages/services.html.twig', ['active'=>$request->attributes->get('_route'), 'class'=>'', 'title'=>"WebSystem | Services" , 'content' => $request->get('content')]) );
         // $response->setTtl(19);
 
         return $response;
@@ -36,7 +37,7 @@ class StageController
     {
         /* bs-multipurpose-ruma */
         extract($request->attributes->all(), EXTR_SKIP);
-        $response = new Response($this->getTwig()->render('/pages/portfolio.html.twig', ['title'=>"WebSystem | Services" , 'content' => $request->get('content')]) );
+        $response = new Response($this->getTwig()->render('/pages/portfolio.html.twig', ['active'=>$request->attributes->get('_route'), 'class'=>'', 'title'=>"WebSystem | Services" , 'content' => $request->get('content')]) );
         // $response->setTtl(19);
 
         return $response;
@@ -46,21 +47,54 @@ class StageController
     {
         /* bs-multipurpose-ruma */
         extract($request->attributes->all(), EXTR_SKIP);
-        $response = new Response($this->getTwig()->render('/pages/pricing.html.twig', ['title'=>"WebSystem | Services" , 'content' => $request->get('content')]) );
+        $response = new Response($this->getTwig()->render('/pages/pricing.html.twig', ['active'=>$request->attributes->get('_route'), 'class'=>'', 'title'=>"WebSystem | Services" , 'content' => $request->get('content')]) );
         // $response->setTtl(19);
 
         return $response;
     }
 
+    public function postContactAction(Request $request)
+    {
+        /* TODO implement swiftmailer */
+        var_dump($request->get('email'));
+        exit;
+    }
+
 
     public function aboutAction(Request $request)
     {
-        return $this->renderTemplate($request);
+        extract($request->attributes->all(), EXTR_SKIP);
+        $response = new Response($this->getTwig()->render('/pages/about-us.html.twig', ['active'=>$request->attributes->get('_route'), 'class'=>'', 'title'=>"WebSystem | About" , 'content' => $request->get('content')]) );
+        // $response->setTtl(19);
+
+        return $response;
+    }
+
+    public function shortcodesAction(Request $request)
+    {
+        extract($request->attributes->all(), EXTR_SKIP);
+        $response = new Response($this->getTwig()->render('/pages/shortcodes.html.twig', ['active'=>$request->attributes->get('_route'), 'class'=>'', 'title'=>"WebSystem | About" , 'content' => $request->get('content')]) );
+        // $response->setTtl(19);
+
+        return $response;
     }
 
     public function blogAction(Request $request)
     {
-        return $this->renderTemplate($request);
+        extract($request->attributes->all(), EXTR_SKIP);
+        $response = new Response($this->getTwig()->render('/pages/blog.html.twig', ['active'=>$request->attributes->get('_route'), 'class'=>'', 'title'=>"WebSystem | About" , 'content' => $request->get('content')]) );
+        // $response->setTtl(19);
+
+        return $response;
+    }
+
+    public function blogItemAction(Request $request)
+    {
+        extract($request->attributes->all(), EXTR_SKIP);
+        $response = new Response($this->getTwig()->render('/pages/blog-item.html.twig', ['active'=>$request->attributes->get('_route'), 'class'=>'', 'title'=>"WebSystem | Blog-Single" , 'content' => $request->get('content')]) );
+        // $response->setTtl(19);
+
+        return $response;
     }
 
     public function newsAction(Request $request)
@@ -72,7 +106,7 @@ class StageController
     {
         /* bs-multipurpose-ruma */
         extract($request->attributes->all(), EXTR_SKIP);
-        $response = new Response($this->getTwig()->render('/pages/contact.html.twig', ['title'=>"WebSystem | Contact" , 'content' => $request->get('content')]) );
+        $response = new Response($this->getTwig()->render('/pages/contact-us.html.twig', ['active'=>$request->attributes->get('_route'), 'class'=>'', 'title'=>"WebSystem | Contact" , 'content' => $request->get('content')]) );
         // $response->setTtl(19);
 
         return $response;

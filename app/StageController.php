@@ -2,6 +2,7 @@
 
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
+use Symfony\Component\HttpFoundation\RedirectResponse;
 use Pimple\Container;
 
 class StageController
@@ -74,10 +75,8 @@ class StageController
         $email = $request->get('email');
         $pass  = $request->get('password');
 
-        exit;
 
-        /* TODO Check for redirection */
-
+        return new RedirectResponse('/services');
     }
 
 

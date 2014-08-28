@@ -9,10 +9,10 @@
     ],
     "require": {
     	"php": ">=5.4.0",
-	"pimple/pimple": "~2.1",
+	    "pimple/pimple": "~2.1",
         "symfony/monolog-bridge": ">=2.3,<2.6-dev",
         "symfony/twig-bridge": ">=2.3,<2.6-dev",
-	"symfony/event-dispatcher" :">=2.3,<2.6-dev",
+	    "symfony/event-dispatcher" :">=2.3,<2.6-dev",
         "symfony/http-foundation" :">=2.3,<2.6-dev",
         "symfony/http-kernel" :">=2.3,<2.6-dev",
         "symfony/routing" :">=2.3,<2.6-dev",

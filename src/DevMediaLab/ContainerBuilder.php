@@ -1,6 +1,4 @@
 <?php
-
-
 namespace DevMediaLab;
 
 use StageController;
@@ -15,16 +13,19 @@ use Symfony\Component\EventDispatcher\EventDispatcher;
 use Symfony\Component\HttpKernel\Controller\ControllerResolver;
 use Symfony\Component\HttpKernel\EventListener\RouterListener;
 use Symfony\Component\HttpKernel\EventListener\ExceptionListener;
+use Symfony\Component\Yaml\Yaml;
 use Pimple\Container;
 
 class ContainerBuilder
 {
     protected $container;
 
-
     public function __construct(Container $container)
     {
         $this->container = $container;
+        $this->container['yaml'] = function($c) {
+            return new Yaml();
+        };
     }
 
     public function build()

@@ -12,8 +12,7 @@ return [
         'http.response',
         'exception.listener',
         'stage.controller.listener',
-        'twig',
-        'base.view'
+        'twig'
     ],
 
     "aliases" => [

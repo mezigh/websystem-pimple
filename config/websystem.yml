@@ -1,0 +1,57 @@
+theme:
+    name:
+    path:
+    structure:
+
+pages:
+    home:
+        controller: stage.controller
+        method: indexAction
+
+    services:
+        controller: stage.controller
+        method: servicesAction
+
+    portfolio:
+        controller: stage.controller
+        method: portfolioAction
+
+    pricing:
+        controller: stage.controller
+        method: pricingAction
+
+    about:
+        controller: stage.controller
+        method: aboutAction
+
+    blog:
+        controller: stage.controller
+        method: blogAction
+
+    login:
+        controller: stage.controller
+        method: loginAction
+
+    post_login:
+        controller: stage.controller
+        method: postLoginAction
+
+    blog_item:
+        controller: stage.controller
+        method: blogItemAction
+
+    news:
+        controller: stage.controller
+        method: newsAction
+
+    shortcodes:
+        controller: stage.controller
+        method: shortcodesAction
+
+    contact:
+        controller: stage.controller
+        method: contactAction
+
+    post_contact:
+        controller: stage.controller
+        method : postContactAction

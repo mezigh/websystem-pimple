@@ -4,7 +4,7 @@
         "Read more about it at http://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "7c0e7d964d2aceee9058b4512e80e3f9",
+    "hash": "2f677517b68131957adbb97c57f8f4cc",
     "packages": [
         {
             "name": "monolog/monolog",
@@ -80,16 +80,16 @@
         },
         {
             "name": "nesbot/carbon",
-            "version": "1.10.0",
+            "version": "1.11.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/briannesbitt/Carbon.git",
-                "reference": "9b42a1aec56011c2ac4d75c0ddad0794762344fc"
+                "reference": "2b60366be6dcb9f9cd3e244ab25eb98eaea99551"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/briannesbitt/Carbon/zipball/9b42a1aec56011c2ac4d75c0ddad0794762344fc",
-                "reference": "9b42a1aec56011c2ac4d75c0ddad0794762344fc",
+                "url": "https://api.github.com/repos/briannesbitt/Carbon/zipball/2b60366be6dcb9f9cd3e244ab25eb98eaea99551",
+                "reference": "2b60366be6dcb9f9cd3e244ab25eb98eaea99551",
                 "shasum": ""
             },
             "require": {
@@ -122,7 +122,71 @@
                 "datetime",
                 "time"
             ],
-            "time": "2014-07-18 03:44:47"
+            "time": "2014-08-26 03:18:44"
+        },
+        {
+            "name": "ocramius/proxy-manager",
+            "version": "0.5.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/Ocramius/ProxyManager.git",
+                "reference": "eaaf10f9a24ffd79a3e388809f6d61f229e261bd"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/Ocramius/ProxyManager/zipball/eaaf10f9a24ffd79a3e388809f6d61f229e261bd",
+                "reference": "eaaf10f9a24ffd79a3e388809f6d61f229e261bd",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.3.3",
+                "zendframework/zend-code": ">2.2.5,<3.0"
+            },
+            "require-dev": {
+                "ext-phar": "*",
+                "phpunit/phpunit": "~3.7",
+                "squizlabs/php_codesniffer": "1.5.*"
+            },
+            "suggest": {
+                "ocramius/generated-hydrator": "To have very fast object to array to object conversion for ghost objects",
+                "zendframework/zend-json": "To have the JsonRpc adapter (Remote Object feature)",
+                "zendframework/zend-soap": "To have the Soap adapter (Remote Object feature)",
+                "zendframework/zend-stdlib": "To use the hydrator proxy",
+                "zendframework/zend-xmlrpc": "To have the XmlRpc adapter (Remote Object feature)"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "0.6.x-dev"
+                }
+            },
+            "autoload": {
+                "psr-0": {
+                    "ProxyManager\\": "src"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Marco Pivetta",
+                    "email": "ocramius@gmail.com",
+                    "homepage": "http://ocramius.github.com/",
+                    "role": "Developer"
+                }
+            ],
+            "description": "A library providing utilities to generate, instantiate and generally operate with Object Proxies",
+            "homepage": "https://github.com/Ocramius/ProxyManager",
+            "keywords": [
+                "aop",
+                "lazy loading",
+                "proxy",
+                "proxy pattern",
+                "service proxies"
+            ],
+            "time": "2014-03-12 14:00:19"
         },
         {
             "name": "pimple/pimple",
@@ -214,18 +278,66 @@
             "time": "2014-01-18 15:33:09"
         },
         {
+            "name": "symfony/config",
+            "version": "2.5.x-dev",
+            "target-dir": "Symfony/Component/Config",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/symfony/Config.git",
+                "reference": "080eabdc256c1d7a3a7cf6296271edb68eb1ab2b"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/symfony/Config/zipball/080eabdc256c1d7a3a7cf6296271edb68eb1ab2b",
+                "reference": "080eabdc256c1d7a3a7cf6296271edb68eb1ab2b",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.3.3",
+                "symfony/filesystem": "~2.3"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "2.5-dev"
+                }
+            },
+            "autoload": {
+                "psr-0": {
+                    "Symfony\\Component\\Config\\": ""
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Symfony Community",
+                    "homepage": "http://symfony.com/contributors"
+                },
+                {
+                    "name": "Fabien Potencier",
+                    "email": "fabien@symfony.com"
+                }
+            ],
+            "description": "Symfony Config Component",
+            "homepage": "http://symfony.com",
+            "time": "2014-08-31 03:22:04"
+        },
+        {
             "name": "symfony/debug",
             "version": "dev-master",
             "target-dir": "Symfony/Component/Debug",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/Debug.git",
-                "reference": "a0f1676b45b69aada4d630bd9e6317b1e95ed236"
+                "reference": "671aca935d0273a7dc81e2575b68acbbbb916b9c"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/Debug/zipball/a0f1676b45b69aada4d630bd9e6317b1e95ed236",
-                "reference": "a0f1676b45b69aada4d630bd9e6317b1e95ed236",
+                "url": "https://api.github.com/repos/symfony/Debug/zipball/671aca935d0273a7dc81e2575b68acbbbb916b9c",
+                "reference": "671aca935d0273a7dc81e2575b68acbbbb916b9c",
                 "shasum": ""
             },
             "require": {
@@ -257,19 +369,74 @@
             ],
             "authors": [
                 {
-                    "name": "Fabien Potencier",
-                    "email": "fabien@symfony.com",
-                    "homepage": "http://fabien.potencier.org",
-                    "role": "Lead Developer"
-                },
-                {
                     "name": "Symfony Community",
                     "homepage": "http://symfony.com/contributors"
+                },
+                {
+                    "name": "Fabien Potencier",
+                    "email": "fabien@symfony.com"
                 }
             ],
             "description": "Symfony Debug Component",
             "homepage": "http://symfony.com",
-            "time": "2014-07-11 15:37:14"
+            "time": "2014-08-25 18:48:35"
+        },
+        {
+            "name": "symfony/dependency-injection",
+            "version": "2.5.x-dev",
+            "target-dir": "Symfony/Component/DependencyInjection",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/symfony/DependencyInjection.git",
+                "reference": "dcfdfbfdab2dc5bf00e5274719126a3079c6d02c"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/symfony/DependencyInjection/zipball/dcfdfbfdab2dc5bf00e5274719126a3079c6d02c",
+                "reference": "dcfdfbfdab2dc5bf00e5274719126a3079c6d02c",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.3.3"
+            },
+            "require-dev": {
+                "symfony/config": "~2.2",
+                "symfony/expression-language": "~2.4",
+                "symfony/yaml": "~2.0"
+            },
+            "suggest": {
+                "symfony/config": "",
+                "symfony/proxy-manager-bridge": "Generate service proxies to lazy load them",
+                "symfony/yaml": ""
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "2.5-dev"
+                }
+            },
+            "autoload": {
+                "psr-0": {
+                    "Symfony\\Component\\DependencyInjection\\": ""
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Symfony Community",
+                    "homepage": "http://symfony.com/contributors"
+                },
+                {
+                    "name": "Fabien Potencier",
+                    "email": "fabien@symfony.com"
+                }
+            ],
+            "description": "Symfony DependencyInjection Component",
+            "homepage": "http://symfony.com",
+            "time": "2014-08-31 03:22:04"
         },
         {
             "name": "symfony/event-dispatcher",
@@ -327,6 +494,53 @@
             "description": "Symfony EventDispatcher Component",
             "homepage": "http://symfony.com",
             "time": "2014-07-28 13:20:46"
+        },
+        {
+            "name": "symfony/filesystem",
+            "version": "dev-master",
+            "target-dir": "Symfony/Component/Filesystem",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/symfony/Filesystem.git",
+                "reference": "ab21893f8e117251b0b6e30f9709e13d2e1fa0cf"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/symfony/Filesystem/zipball/ab21893f8e117251b0b6e30f9709e13d2e1fa0cf",
+                "reference": "ab21893f8e117251b0b6e30f9709e13d2e1fa0cf",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.3.3"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "2.6-dev"
+                }
+            },
+            "autoload": {
+                "psr-0": {
+                    "Symfony\\Component\\Filesystem\\": ""
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Symfony Community",
+                    "homepage": "http://symfony.com/contributors"
+                },
+                {
+                    "name": "Fabien Potencier",
+                    "email": "fabien@symfony.com"
+                }
+            ],
+            "description": "Symfony Filesystem Component",
+            "homepage": "http://symfony.com",
+            "time": "2014-08-31 03:28:38"
         },
         {
             "name": "symfony/http-foundation",
@@ -388,12 +602,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/HttpKernel.git",
-                "reference": "c90d1811e3ed2f119de61aa63e7044cd5ca422a7"
+                "reference": "473c33d12709b7dfceb608c7b634bebc1ab4b06c"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/HttpKernel/zipball/c90d1811e3ed2f119de61aa63e7044cd5ca422a7",
-                "reference": "c90d1811e3ed2f119de61aa63e7044cd5ca422a7",
+                "url": "https://api.github.com/repos/symfony/HttpKernel/zipball/473c33d12709b7dfceb608c7b634bebc1ab4b06c",
+                "reference": "473c33d12709b7dfceb608c7b634bebc1ab4b06c",
                 "shasum": ""
             },
             "require": {
@@ -450,7 +664,7 @@
             ],
             "description": "Symfony HttpKernel Component",
             "homepage": "http://symfony.com",
-            "time": "2014-08-11 09:10:42"
+            "time": "2014-08-31 03:22:04"
         },
         {
             "name": "symfony/monolog-bridge",
@@ -511,18 +725,69 @@
             "time": "2014-07-28 13:20:46"
         },
         {
+            "name": "symfony/proxy-manager-bridge",
+            "version": "2.5.x-dev",
+            "target-dir": "Symfony/Bridge/ProxyManager",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/symfony/ProxyManagerBridge.git",
+                "reference": "5365aedf83b125a3b88e683e2129ff0c719bd341"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/symfony/ProxyManagerBridge/zipball/5365aedf83b125a3b88e683e2129ff0c719bd341",
+                "reference": "5365aedf83b125a3b88e683e2129ff0c719bd341",
+                "shasum": ""
+            },
+            "require": {
+                "ocramius/proxy-manager": ">=0.3.1,<0.6-dev",
+                "php": ">=5.3.3",
+                "symfony/dependency-injection": "~2.3"
+            },
+            "type": "symfony-bridge",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "2.5-dev"
+                }
+            },
+            "autoload": {
+                "psr-0": {
+                    "Symfony\\Bridge\\ProxyManager\\": ""
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Fabien Potencier",
+                    "email": "fabien@symfony.com",
+                    "homepage": "http://fabien.potencier.org",
+                    "role": "Lead Developer"
+                },
+                {
+                    "name": "Symfony Community",
+                    "homepage": "http://symfony.com/contributors"
+                }
+            ],
+            "description": "Symfony ProxyManager Bridge",
+            "homepage": "http://symfony.com",
+            "time": "2014-07-09 09:05:48"
+        },
+        {
             "name": "symfony/routing",
             "version": "2.5.x-dev",
             "target-dir": "Symfony/Component/Routing",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/Routing.git",
-                "reference": "1c285e6fffaa026c8073a387f403b1052d61ed95"
+                "reference": "de58587ae3fb17fdc802893cf934bbb03e6b8eb5"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/Routing/zipball/1c285e6fffaa026c8073a387f403b1052d61ed95",
-                "reference": "1c285e6fffaa026c8073a387f403b1052d61ed95",
+                "url": "https://api.github.com/repos/symfony/Routing/zipball/de58587ae3fb17fdc802893cf934bbb03e6b8eb5",
+                "reference": "de58587ae3fb17fdc802893cf934bbb03e6b8eb5",
                 "shasum": ""
             },
             "require": {
@@ -574,7 +839,7 @@
                 "uri",
                 "url"
             ],
-            "time": "2014-07-28 13:20:46"
+            "time": "2014-08-26 14:16:33"
         },
         {
             "name": "symfony/security-core",
@@ -583,12 +848,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/security-core.git",
-                "reference": "929721e46d5f07bf2aa55039ab6e8fa8425bd1d6"
+                "reference": "dd5649bbabaaa9a5ed6fe76de720b046cead1382"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/security-core/zipball/929721e46d5f07bf2aa55039ab6e8fa8425bd1d6",
-                "reference": "929721e46d5f07bf2aa55039ab6e8fa8425bd1d6",
+                "url": "https://api.github.com/repos/symfony/security-core/zipball/dd5649bbabaaa9a5ed6fe76de720b046cead1382",
+                "reference": "dd5649bbabaaa9a5ed6fe76de720b046cead1382",
                 "shasum": ""
             },
             "require": {
@@ -636,7 +901,7 @@
             ],
             "description": "Symfony Security Component - Core Library",
             "homepage": "http://symfony.com",
-            "time": "2014-08-14 16:37:29"
+            "time": "2014-08-26 14:16:42"
         },
         {
             "name": "symfony/security-csrf",
@@ -773,12 +1038,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/Yaml.git",
-                "reference": "5a75366ae9ca8b4792cd0083e4ca4dff9fe96f1f"
+                "reference": "01a7695bcfb013d0a15c6757e15aae120342986f"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/Yaml/zipball/5a75366ae9ca8b4792cd0083e4ca4dff9fe96f1f",
-                "reference": "5a75366ae9ca8b4792cd0083e4ca4dff9fe96f1f",
+                "url": "https://api.github.com/repos/symfony/Yaml/zipball/01a7695bcfb013d0a15c6757e15aae120342986f",
+                "reference": "01a7695bcfb013d0a15c6757e15aae120342986f",
                 "shasum": ""
             },
             "require": {
@@ -811,7 +1076,7 @@
             ],
             "description": "Symfony Yaml Component",
             "homepage": "http://symfony.com",
-            "time": "2014-08-05 09:00:40"
+            "time": "2014-08-31 03:22:04"
         },
         {
             "name": "twig/twig",
@@ -819,12 +1084,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/fabpot/Twig.git",
-                "reference": "e2d2a250d963dd5bba4ad23fc01c7282fc042946"
+                "reference": "9cd07271c3b0efb8d82fd9dae18be48ffd6b09ad"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/fabpot/Twig/zipball/e2d2a250d963dd5bba4ad23fc01c7282fc042946",
-                "reference": "e2d2a250d963dd5bba4ad23fc01c7282fc042946",
+                "url": "https://api.github.com/repos/fabpot/Twig/zipball/9cd07271c3b0efb8d82fd9dae18be48ffd6b09ad",
+                "reference": "9cd07271c3b0efb8d82fd9dae18be48ffd6b09ad",
                 "shasum": ""
             },
             "require": {
@@ -868,7 +1133,148 @@
             "keywords": [
                 "templating"
             ],
-            "time": "2014-08-06 06:46:32"
+            "time": "2014-08-27 09:26:36"
+        },
+        {
+            "name": "zendframework/zend-code",
+            "version": "dev-develop",
+            "target-dir": "Zend/Code",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/zendframework/Component_ZendCode.git",
+                "reference": "c9cc60fa85c22a9acaba6925765eb48d0dfb8c28"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/zendframework/Component_ZendCode/zipball/c9cc60fa85c22a9acaba6925765eb48d0dfb8c28",
+                "reference": "c9cc60fa85c22a9acaba6925765eb48d0dfb8c28",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.3.23",
+                "zendframework/zend-eventmanager": "self.version"
+            },
+            "require-dev": {
+                "doctrine/common": ">=2.1",
+                "zendframework/zend-stdlib": "self.version"
+            },
+            "suggest": {
+                "doctrine/common": "Doctrine\\Common >=2.1 for annotation features",
+                "zendframework/zend-stdlib": "Zend\\Stdlib component"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "2.2-dev",
+                    "dev-develop": "2.3-dev"
+                }
+            },
+            "autoload": {
+                "psr-0": {
+                    "Zend\\Code\\": ""
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "BSD-3-Clause"
+            ],
+            "description": "provides facilities to generate arbitrary code using an object oriented interface",
+            "keywords": [
+                "code",
+                "zf2"
+            ],
+            "time": "2014-03-05 16:00:14"
+        },
+        {
+            "name": "zendframework/zend-eventmanager",
+            "version": "dev-develop",
+            "target-dir": "Zend/EventManager",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/zendframework/Component_ZendEventManager.git",
+                "reference": "e232aeeab9ae6545ac21c8fc2728d54297969658"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/zendframework/Component_ZendEventManager/zipball/e232aeeab9ae6545ac21c8fc2728d54297969658",
+                "reference": "e232aeeab9ae6545ac21c8fc2728d54297969658",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.3.3",
+                "zendframework/zend-stdlib": "self.version"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "2.2-dev",
+                    "dev-develop": "2.3-dev"
+                }
+            },
+            "autoload": {
+                "psr-0": {
+                    "Zend\\EventManager\\": ""
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "BSD-3-Clause"
+            ],
+            "keywords": [
+                "eventmanager",
+                "zf2"
+            ],
+            "time": "2014-01-04 13:01:02"
+        },
+        {
+            "name": "zendframework/zend-stdlib",
+            "version": "dev-develop",
+            "target-dir": "Zend/Stdlib",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/zendframework/Component_ZendStdlib.git",
+                "reference": "3acce3d524c5c5b7e92c90b0c2763068c1efaf2c"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/zendframework/Component_ZendStdlib/zipball/3acce3d524c5c5b7e92c90b0c2763068c1efaf2c",
+                "reference": "3acce3d524c5c5b7e92c90b0c2763068c1efaf2c",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.3.23"
+            },
+            "require-dev": {
+                "zendframework/zend-eventmanager": "self.version",
+                "zendframework/zend-serializer": "self.version",
+                "zendframework/zend-servicemanager": "self.version"
+            },
+            "suggest": {
+                "zendframework/zend-eventmanager": "To support aggregate hydrator usage",
+                "zendframework/zend-serializer": "Zend\\Serializer component",
+                "zendframework/zend-servicemanager": "To support hydrator plugin manager usage"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "2.2-dev",
+                    "dev-develop": "2.3-dev"
+                }
+            },
+            "autoload": {
+                "psr-0": {
+                    "Zend\\Stdlib\\": ""
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "BSD-3-Clause"
+            ],
+            "keywords": [
+                "stdlib",
+                "zf2"
+            ],
+            "time": "2014-03-13 16:12:22"
         }
     ],
     "packages-dev": [
@@ -932,12 +1338,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/padraic/mockery.git",
-                "reference": "217e04f061861c88ce56677225f8b0cf1eac9e79"
+                "reference": "deb75302acd737e1efa4a975fbe8257798c9ddb0"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/padraic/mockery/zipball/217e04f061861c88ce56677225f8b0cf1eac9e79",
-                "reference": "217e04f061861c88ce56677225f8b0cf1eac9e79",
+                "url": "https://api.github.com/repos/padraic/mockery/zipball/deb75302acd737e1efa4a975fbe8257798c9ddb0",
+                "reference": "deb75302acd737e1efa4a975fbe8257798c9ddb0",
                 "shasum": ""
             },
             "require": {
@@ -990,7 +1396,7 @@
                 "test double",
                 "testing"
             ],
-            "time": "2014-08-11 12:38:44"
+            "time": "2014-08-28 11:39:03"
         },
         {
             "name": "phpunit/php-code-coverage",
@@ -1189,16 +1595,16 @@
         },
         {
             "name": "phpunit/php-token-stream",
-            "version": "dev-master",
+            "version": "1.2.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/sebastianbergmann/php-token-stream.git",
-                "reference": "980a02b40496a25ce38acb4d3f4949b77abf9f20"
+                "reference": "ad4e1e23ae01b483c16f600ff1bebec184588e32"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/sebastianbergmann/php-token-stream/zipball/980a02b40496a25ce38acb4d3f4949b77abf9f20",
-                "reference": "980a02b40496a25ce38acb4d3f4949b77abf9f20",
+                "url": "https://api.github.com/repos/sebastianbergmann/php-token-stream/zipball/ad4e1e23ae01b483c16f600ff1bebec184588e32",
+                "reference": "ad4e1e23ae01b483c16f600ff1bebec184588e32",
                 "shasum": ""
             },
             "require": {
@@ -1217,6 +1623,9 @@
                 ]
             },
             "notification-url": "https://packagist.org/downloads/",
+            "include-path": [
+                ""
+            ],
             "license": [
                 "BSD-3-Clause"
             ],
@@ -1232,7 +1641,7 @@
             "keywords": [
                 "tokenizer"
             ],
-            "time": "2014-08-14 16:51:26"
+            "time": "2014-03-03 05:10:30"
         },
         {
             "name": "phpunit/phpunit",
@@ -1240,12 +1649,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/sebastianbergmann/phpunit.git",
-                "reference": "f608785bef567a9da36dd47e4e5a099fb42fdefc"
+                "reference": "42f3bd57dc5892d707ff0c4027e66f3424ae5b00"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/sebastianbergmann/phpunit/zipball/f608785bef567a9da36dd47e4e5a099fb42fdefc",
-                "reference": "f608785bef567a9da36dd47e4e5a099fb42fdefc",
+                "url": "https://api.github.com/repos/sebastianbergmann/phpunit/zipball/42f3bd57dc5892d707ff0c4027e66f3424ae5b00",
+                "reference": "42f3bd57dc5892d707ff0c4027e66f3424ae5b00",
                 "shasum": ""
             },
             "require": {
@@ -1302,7 +1711,7 @@
                 "testing",
                 "xunit"
             ],
-            "time": "2014-08-24 13:50:04"
+            "time": "2014-08-30 17:55:18"
         },
         {
             "name": "phpunit/phpunit-mock-objects",

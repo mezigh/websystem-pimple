@@ -1,25 +1,17 @@
 parameters:
     app.name: WebSystem
+    app.subname: framework
     app.version: 0.1.0
     app.author: DevMediaLab
     debug: true
 
 services:
-    websystem:
-        class: DevMediaLab\WebSystem
-        arguments:
-            - @service_container
-
-    front_controller:
-        class: DevMediaLab\FrontController
-        arguments:
-            - @http_kernel
-
-    http_kernel:
-        class: Symfony\Component\HttpKernel\HttpKernel
+    framework:
+        class: DevMediaLab\Framework
         arguments:
             - @dispatcher
             - @controller_resolver
+            - @service_container
 
     dispatcher:
         class: Symfony\Component\EventDispatcher\ContainerAwareEventDispatcher
@@ -45,16 +37,16 @@ services:
             - @routes
             - @request_context
 
-    #dummy_controller:
-    #    class: DevMediaLab\DummyController
-    #    arguments:
-    #        - @service_container
+    stage_controller:
+        class: StageController
+        arguments:
+            - @service_container
 
     request_context:
         class: Symfony\Component\Routing\RequestContext
 
     exception_controller:
-        class: DevMediaLab\ExceptionController
+        class: DevMediaLab\ErrorInterceptor
         arguments:
             - @exception_handler
 

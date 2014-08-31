@@ -7,8 +7,8 @@ use Symfony\Component\HttpKernel\HttpCache\Store;
 
 $baseServices = require_once __DIR__.'/../config/framework.config.php';
 
-$pathForThemes = __DIR__.'/vendors/';
-$themeForUI    = $pathForThemes."happy-scroll";
+// $pathForThemes = __DIR__.'/vendors/';
+// $themeForUI    = $pathForThemes."happy-scroll";
 
 $container = DevMediaLab\ContainerFactory::createContainer();
 

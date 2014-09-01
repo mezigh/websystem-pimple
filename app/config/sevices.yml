@@ -1,0 +1,100 @@
+parameters:
+    app.name: WebSystem
+    app.version: 0.1.0
+    app.author: DevMediaLab
+    debug: true
+
+services:
+    websystem:
+        class: DevMediaLab\WebSystem
+        arguments:
+            - @service_container
+
+    front_controller:
+        class: DevMediaLab\FrontController
+        arguments:
+            - @http_kernel
+
+    http_kernel:
+        class: Symfony\Component\HttpKernel\HttpKernel
+        arguments:
+            - @dispatcher
+            - @controller_resolver
+
+    dispatcher:
+        class: Symfony\Component\EventDispatcher\ContainerAwareEventDispatcher
+        arguments:
+            - @service_container
+
+    controller_resolver:
+        class: Symfony\Component\HttpKernel\Controller\ControllerResolver
+        arguments:
+            - @?logger
+
+    router_builder:
+        class: DevMediaLab\RouterBuilder
+        arguments:
+            - @routes
+
+    routes:
+        class: Symfony\Component\Routing\RouteCollection
+
+    url_matcher:
+        class: Symfony\Component\Routing\Matcher\UrlMatcher
+        arguments:
+            - @routes
+            - @request_context
+
+    #dummy_controller:
+    #    class: DevMediaLab\DummyController
+    #    arguments:
+    #        - @service_container
+
+    request_context:
+        class: Symfony\Component\Routing\RequestContext
+
+    exception_controller:
+        class: DevMediaLab\ExceptionController
+        arguments:
+            - @exception_handler
+
+    exception_handler:
+        class: Symfony\Component\HttpKernel\Debug\ExceptionHandler
+        arguments:
+            - %debug%
+
+    # Listeners
+
+    listener.router:
+        class: Symfony\Component\HttpKernel\EventListener\RouterListener
+        arguments:
+            - @url_matcher
+            - @request_context
+            - @?logger
+        tags:
+            - { name: kernel.event_subscriber }
+
+    listener.response:
+        class: Symfony\Component\HttpKernel\EventListener\ResponseListener
+        arguments:
+            - UTF-8
+        tags:
+            - { name: kernel.event_subscriber }
+
+    listener.exception:
+        class: Symfony\Component\HttpKernel\EventListener\ExceptionListener
+        arguments:
+            - [@exception_controller, 'handle']
+            - @?logger
+        tags:
+            - { name: kernel.event_subscriber }
+
+    listener.request_parameter:
+        class: DevMediaLab\EventListener\RequestParameterListener
+        tags:
+            - { name: kernel.event_subscriber }
+
+    listener.string_response:
+        class: DevMediaLab\EventListener\StringResponseListener
+        tags:
+            - { name: kernel.event_subscriber }

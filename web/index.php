@@ -7,12 +7,17 @@ use Symfony\Component\HttpKernel\HttpCache\Store;
 
 $baseServices = require_once __DIR__.'/../config/framework.config.php';
 
-$pathForThemes = __DIR__.'/vendors/';
-$themeForUI    = $pathForThemes."happy-scroll";
-
 $container = DevMediaLab\ContainerFactory::createContainer();
 
 $builder = new DevMediaLab\ContainerBuilder($container);
+
+/*$yml = $container['yaml'];
+$config_yml = __DIR__.'/../config/websystem.yml';
+$conf_from_yml = $yml::parse(file_get_contents($config_yml));
+
+var_dump($conf_from_yml);
+
+exit;*/
 
 $container = $builder->build();
 

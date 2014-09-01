@@ -1,7 +1,7 @@
 <?php
 
 /**
- * Paths
+ * Paths THIS FILE IS UNUSED !
  */
 return [
     "app.path"  => __DIR__.'/../app',

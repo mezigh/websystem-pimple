@@ -131,6 +131,11 @@ class StageController
         return $response;
     }
 
+    protected function prepareResponse()
+    {
+
+    }
+
     protected  function getTwig()
     {
         return $this->container['twig'];
